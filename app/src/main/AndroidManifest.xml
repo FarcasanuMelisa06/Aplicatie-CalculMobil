@@ -20,7 +20,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".ProduseActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -35,7 +35,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ProduseActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:label="Products page">
             <intent-filter>
