@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LoginRegister</string>
+    <string name="btn_add">add product</string>
+    <string name="btn_remove">remove product</string>
+    <string name="cantitate">Amount: </string>
+
+    <string name="nameProdus1">Apple</string>
+    <string name="priceProdus1">2</string>
+
+    <string name="priceProdus2">3</string>
+    <string name="nameProdus2">Tomato</string>
+
+    <string name="priceProdus3">1</string>
+    <string name="nameProdus3">Pear</string>
+
+    <string name="priceProdus4">2</string>
+    <string name="nameProdus4">Potato</string>
+
+    <string name="nameProdus5">Grapes</string>
+    <string name="priceProdus5">3</string>
+
+    <string name="cosulCumparaturi">Shopping basket</string>
+
+</resources>
