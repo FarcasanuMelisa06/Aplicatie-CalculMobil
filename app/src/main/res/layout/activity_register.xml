@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#215354"
-    tools:context=".Register">
+    tools:context="com.example.AplicatieCM.Register">
 
     <TextView
         android:id="@+id/account"
@@ -30,6 +30,7 @@
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text=""
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -49,6 +50,7 @@
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text=""
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -68,6 +70,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text=""
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -87,6 +90,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:text=""
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"

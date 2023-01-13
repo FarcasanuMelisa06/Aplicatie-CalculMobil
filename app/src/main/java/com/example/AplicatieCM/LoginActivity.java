@@ -1,4 +1,4 @@
-package com.example.loginregister;
+package com.example.AplicatieCM;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.loginregister.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -87,10 +88,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
                             Intent intent = new Intent(LoginActivity.this, ProduseActivity.class);
                             startActivity(intent);
+
                             Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
                         } else {
+
                             Toast.makeText(LoginActivity.this, "This user is not registered ", Toast.LENGTH_SHORT).show();
                         }
                     }

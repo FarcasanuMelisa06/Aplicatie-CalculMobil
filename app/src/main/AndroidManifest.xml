@@ -11,8 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginRegister"
         tools:targetApi="31">
+
+        <service
+            android:name="com.example.AplicatieCM.MyService"
+            android:enabled="true"
+            android:exported="true" />
         <activity
-            android:name=".ListaProduseActivity"
+            android:name="com.example.AplicatieCM.ListaProduseActivity"
             android:exported="false"
             android:label="Products List">
             <meta-data
@@ -20,14 +25,15 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ProduseActivity"
-            android:exported="false">
+            android:name="com.example.AplicatieCM.ProduseActivity"
+            android:exported="false"
+            android:label="Products Page">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Register"
+            android:name="com.example.AplicatieCM.Register"
             android:exported="false"
             android:label="Register Page">
             <meta-data
@@ -35,9 +41,9 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.example.AplicatieCM.LoginActivity"
             android:exported="true"
-            android:label="Products page">
+            android:label="Login Page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

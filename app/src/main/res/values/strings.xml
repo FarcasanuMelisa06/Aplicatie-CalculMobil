@@ -5,19 +5,20 @@
     <string name="cantitate">Amount: </string>
 
     <string name="nameProdus1">Apple</string>
-    <string name="priceProdus1">2</string>
+    <string name="price1">Price: 2$</string>
 
-    <string name="priceProdus2">3</string>
     <string name="nameProdus2">Tomato</string>
+    <string name="price2">Price: 3$</string>
 
-    <string name="priceProdus3">1</string>
     <string name="nameProdus3">Pear</string>
+    <string name="price3">Price: 1$</string>
 
-    <string name="priceProdus4">2</string>
     <string name="nameProdus4">Potato</string>
+    <string name="price4">Price: 2$</string>
 
     <string name="nameProdus5">Grapes</string>
-    <string name="priceProdus5">3</string>
+    <string name="price5">Price: 3$</string>
+
 
     <string name="cosulCumparaturi">Shopping basket</string>
 

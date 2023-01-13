@@ -1,4 +1,4 @@
-package com.example.loginregister;
+package com.example.AplicatieCM;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,19 +10,24 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.loginregister.R;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class ListaProduseActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public Button btn_inapoiProduse, btn_finalComanda;
-    public ListView listaProduse;
+    public Button btn_backProduct, btn_command;
+    public ListView listProducts;
+
+    public TextView sumaTot;
+    int suma = 0;
 
     ArrayAdapter myAdapter;
-    ArrayList<String> produse = new ArrayList<>();
+    ArrayList<String> products = new ArrayList<>();
     String aux = "";
+
 
 
     @Override
@@ -30,28 +35,33 @@ public class ListaProduseActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_produse);
 
-        btn_inapoiProduse = findViewById(R.id.btn_inapoiProduse);
-        btn_inapoiProduse.setOnClickListener(this);
+        btn_backProduct = findViewById(R.id.btn_inapoiProduse);
+        btn_backProduct.setOnClickListener(this);
 
-        btn_finalComanda = findViewById(R.id.btn_FinalComanda);
-        btn_finalComanda.setOnClickListener(this);
+        btn_command = findViewById(R.id.btn_FinalComanda);
+        btn_command.setOnClickListener(this);
 
-        listaProduse = findViewById(R.id.listaProduse);
+        listProducts = findViewById(R.id.listaProduse);
+
+        sumaTot = findViewById(R.id.sumTot);
 
         myAdapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, produse);
-        listaProduse.setAdapter(myAdapter);
+                this, android.R.layout.simple_list_item_1, products);
+        listProducts.setAdapter(myAdapter);
+
 
         for (int i = 0; i < ProduseActivity.listaProduse.size(); i++) {
-            aux = ProduseActivity.listaProduse.get(i).getNume() + "               " +
-                    ProduseActivity.listaProduse.get(i).getCantitate() + "                " +
+            aux = ProduseActivity.listaProduse.get(i).getNume() + "            " +
+                    ProduseActivity.listaProduse.get(i).getCantitate() + "            " +
                     ProduseActivity.listaProduse.get(i).getPret();
-            produse.add(aux);
+            suma = suma + (ProduseActivity.listaProduse.get(i).getCantitate() * ProduseActivity.listaProduse.get(i).getPret());
+            products.add(aux);
             myAdapter.notifyDataSetChanged();
             aux = "";
 
         }
 
+        sumaTot.setText("Total Price: " + suma + "$");
 
     }
 
@@ -63,19 +73,21 @@ public class ListaProduseActivity extends AppCompatActivity implements View.OnCl
                 startActivity(intent);
                 break;
             case R.id.btn_FinalComanda: {
+
+                Intent intentService = new Intent(getApplicationContext(), MyService.class);
+                this.startService(intentService);
+
                 String passStatus = "";
 
                 new AlertDialog.Builder(this)
                         .setTitle(passStatus)
                         .setMessage("Congratulations" + "\n" + "The order has been completed successfully")
-                        .setCancelable(false)
+                        .setCancelable(true)
                         .show();
-                
-                break;
+
             }
 
         }
     }
-
 
 }

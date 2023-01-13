@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="priceProdus1">2</integer>
+    <integer name="priceProdus2">3</integer>
+    <integer name="priceProdus3">1</integer>
+    <integer name="priceProdus4">2</integer>
+    <integer name="priceProdus5">3</integer>
+
+</resources>

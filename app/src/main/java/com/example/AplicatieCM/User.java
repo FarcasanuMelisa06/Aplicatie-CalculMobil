@@ -1,4 +1,4 @@
-package com.example.loginregister;
+package com.example.AplicatieCM;
 
 public class User {
 
@@ -6,11 +6,7 @@ public class User {
     public String lastName;
     public String email;
 
-    public User(){
-
-    }
-
-    public User(String firstName, String lastName, String email){
+    public User(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
